@@ -1,6 +1,21 @@
 function minDate(dates) {
   //write you code here
+	 let min = dates[0];
+
+            for (let i = 1; i < dates.length; i++) {
+                if (dates[i] < min) {
+                    min = dates[i];
+                }
+            }
+
+            return min;
 }
+ function findMinDate() {
+            const input = document.getElementById('dateInput').value;
+            const dateArray = input.split(',').map(date => date.trim());
+            const minimumDate = minDate(dateArray);
+            document.getElementById('result').innerText = 'Minimum Date: ' + minimumDate;
+        }
 
 // Do not change the code
 
